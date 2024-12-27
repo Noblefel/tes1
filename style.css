@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+
+:root {
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Poppins, "Segoe UI";
+}
+
+.wrap {
+  width: 1000px;
+  max-width: 95%;
+  margin: auto;
+}
+
+header {
+  background-color: rgb(240, 240, 240);
+
+  .wrap {
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+    text-wrap: nowrap;
+  }
+
+  .kiri,
+  .kanan {
+    display: flex;
+    gap: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    opacity: 0.75;
+  }
+}
+
+section#title {
+  padding: 4rem 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    display: flex;
+    gap: 1rem;
+
+    i {
+      font-size: 4.5rem;
+      color: orange;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .search {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+
+  a {
+    flex: 1;
+    background-color: royalblue;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+
+    &.active,
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
+
+section#find {
+  padding: 5rem 1rem;
+  background-image: url("./gambar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  display: flex;
+
+  h2 {
+    font-size: 2rem;
+    color: white;
+    filter: drop-shadow(2px -1px 8px black);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tab {
+    display: flex;
+    background-color: rgb(240, 240, 240);
+
+    a {
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      flex: 1;
+    }
+
+    a.active {
+      background-color: royalblue;
+      color: white;
+    }
+  }
+
+  .select {
+    background-color: white;
+    padding: 3rem 2rem;
+    display: flex;
+    overflow: auto;
+    gap: 1rem;
+
+    > * {
+      flex: 1;
+    }
+  }
+}
+
+section#produk {
+  padding: 3rem 1rem 5rem 1rem;
+  background-color: rgb(245, 245, 245);
+
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+  }
+
+  .flex {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  article {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    border-radius: 4px;
+
+    img {
+      object-fit: cover;
+      background-color: lightsteelblue;
+      width: 100%;
+      max-height: 300px;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+
+    p:not(.harga) {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .bottom {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      p.harga {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  i {
+    top: 8rem;
+    opacity: 0.4;
+    position: absolute;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      color: orange;
+    }
+  }
+
+  i:first-of-type {
+    transform: translateX(-38rem);
+    font-size: 6rem;
+  }
+
+  i:last-of-type {
+    transform: translateX(38rem);
+    font-size: 6rem;
+  }
+}
+
+footer {
+  background-color: black;
+  padding: 3rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: orange;
+  padding: 0.7rem 2rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+.input-group {
+  position: relative;
+
+  i {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.6rem;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}
+
+input {
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  border: 0;
+  border: 3px solid black;
+}
+
+select {
+  background-color: rgb(240, 240, 240);
+  padding: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.9;
+  }
+}
